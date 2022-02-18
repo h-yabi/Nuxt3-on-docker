@@ -8,8 +8,6 @@
 <script>
 export default {
   setup () {
-    console.log('sutup 関数だよー！aaa')
-
     return {}
   }
 }
