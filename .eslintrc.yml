@@ -1,0 +1,25 @@
+root: true
+env:
+  browser: true
+  node: true
+parser: vue-eslint-parser # パーサにvue-eslint-parserを指定しSFCをリント可能に
+parserOptions:
+  project: ./tsconfig.json
+  ecmaVersion: 13     # same as 2022
+  sourceType: module  # use import/export
+  parser: '@typescript-eslint/parser' # オプションでTypeScriptをパースできるパーサを指定
+  extraFileExtensions: ['.vue']
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:vue/vue3-recommended
+  - plugin:nuxt/recommended
+  - '@nuxtjs/eslint-config-typescript'
+  - prettier
+plugins:
+  - vue
+  - nuxt
+  - '@typescript-eslint'
+rules:
+  vue/script-setup-no-uses-vars: off
+  vue/multi-word-component-names: off
