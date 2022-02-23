@@ -4,13 +4,10 @@ services:
   front:
     container_name: nuxt
     build: .
-    command: yarn dev
     tty: true
+    command: /bin/sh -c "yarn install && yarn dev"
     volumes:
       - .:/code
     ports:
       - '3000:3000'
       - '24678:24678'
-
-volumes:
-  mysqldata:
