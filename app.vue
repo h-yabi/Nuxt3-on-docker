@@ -8,7 +8,6 @@
 export default {
   components: {},
   setup() {
-
     return {};
   },
 };
