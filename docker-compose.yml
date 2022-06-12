@@ -5,7 +5,7 @@ services:
     container_name: nuxt
     build: .
     tty: true
-    command: /bin/sh -c "yarn install && yarn dev"
+    # command: /bin/sh -c "yarn install && yarn dev"
     volumes:
       - .:/code
     ports:
