@@ -1,11 +1,8 @@
----
-to: components/<%= category %>/<%= name %>.vue
----
 <script setup lang="ts">
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed } from 'vue';
 
 // ref
-const refSample = ref(1)
+const refSample = ref(1);
 
 // reactive
 const reactiveSample = reactive({
@@ -19,13 +16,9 @@ const computedSample = computed(() => refSample.value + 1);
 </script>
 
 <template>
-  <div class="<%= h.changeCase.param(name) %>">
+  <div class="v-hoge-hoge">
     {{ refSample }}
-    {{ reactiveSample }}
     {{ computedSample }}
+    {{ reactiveSample }}
   </div>
 </template>
-
-<style lang="scss" scoped>
-// .<%= h.changeCase.param(name) %>
-</style>
