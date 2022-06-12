@@ -8,7 +8,13 @@ import { ref, reactive, computed } from 'vue'
 const refSample = ref(1)
 
 // reactive
-const reactiveSample = reactive({
+type ReactiveSample = {
+  name: string;
+  price: number;
+  url: string;
+};
+
+const reactiveSample = reactive<ReactiveSample>({
   name: 'カレーライス',
   price: 400,
   url: 'https://www.google.com',
