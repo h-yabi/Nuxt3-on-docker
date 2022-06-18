@@ -7,12 +7,24 @@
     "start": "node .output/server/index.mjs",
     "lint": "eslint --ext .ts,.js,.vue .",
     "lint-staged": "lint-staged",
-    "": "prepare: husky install"
+    "": "prepare: husky install",
+    "storybook": "start-storybook -p 3001",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^6.5.9",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
     "@vue/eslint-config-standard": "^6.1.0",
+    "babel-loader": "^8.2.5",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^3.1.0",
@@ -20,7 +32,8 @@
     "husky": "3",
     "hygen": "^6.2.7",
     "lint-staged": "^12.3.4",
-    "nuxt3": "latest"
+    "nuxt3": "latest",
+    "vue-loader": "^16.8.3"
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
